@@ -1,0 +1,88 @@
+body {
+  width: 100%;
+}
+
+header,
+article,
+footer {
+  width: 100%;
+  /* padding: 0 20px; */
+}
+.contains{
+  width: 100%;
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- menu ------------ */
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: block;
+  width: 109px;
+  /* height: 94px; */
+}
+.logo img {
+  width: 100%;
+}
+.menu-box {
+  width: 100%;
+  display: flex;
+  font-size: 18px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 80px;
+}
+.menu-box nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 80px;
+}
+.menu-tel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.menu-tel_img {
+  width: 32px;
+  width: 32px;
+}
+.menu-tel_img img {
+  fill: #86B119;
+  color: #86B119;
+  width: 100%;
+}
+.menu-tel_img svg {
+  fill: #86B119;
+  color: #86B119;
+}
+.menu-tel_num {
+  font-size: 24px;
+}
+.menu-active {
+  border-bottom: 2px solid #86B119;
+}
+.menu-active a {
+  color: #86B119;
+}
+
+/* ------- header ---------- */
+
+header {
+  background-image: url(../images/header-fone.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  
+}
