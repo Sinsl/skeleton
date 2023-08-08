@@ -1,12 +1,29 @@
+:root {
+  --color-green: #86B119;
+  --color-black: #2A2A2A;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../fonts/NotoSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../fonts/NotoSans-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url(../fonts/NotoSans-Bold.ttf);
+  font-weight: 700;
+}
 body {
   width: 100%;
 }
-
 header,
 article,
 footer {
   width: 100%;
-  /* padding: 0 20px; */
 }
 .contains{
   width: 100%;
@@ -52,37 +69,157 @@ footer {
   gap: 10px;
 }
 .menu-tel_img {
-  width: 32px;
-  width: 32px;
+  width: 28px;
+  height: 27px;
 }
 .menu-tel_img img {
-  fill: #86B119;
-  color: #86B119;
   width: 100%;
+  height: 100%;
 }
-.menu-tel_img svg {
-  fill: #86B119;
-  color: #86B119;
-}
+
 .menu-tel_num {
   font-size: 24px;
+  font-weight: 400;
 }
 .menu-active {
-  border-bottom: 2px solid #86B119;
+  border-bottom: 2px solid var(--color-green);
 }
 .menu-active a {
-  color: #86B119;
+  color: var(--color-green);
 }
 
 /* ------- header ---------- */
 
 header {
+  width: 100%;
+  position: relative;
   background-image: url(../images/header-fone.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: 0;
+  font-family: 'NotoSans';
+}
+header::after {
+  content: '';
+  background-image: url(../images/header-house.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 60%;
+  height: 85%;
+  /* top: 150px; */
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+/* при уменьшении экрана, облака не следуют за сжимающимся домом у которого contain, а не cover. В случае. когда у дома cover они идут вместе по горизонтали, но дом не уменьшается по вертикали */
+header::before {
+  content: '';
+  background-image: url(../images/clouds.png);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 20%;
+  bottom: 0px;
+  z-index: 0;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heder-desc {
+  width: 60%;
+  padding: 150px 0 250px;
+  z-index: 1;
+}
+.heder-desc_main {
+  width: 90%;
+  font-size: 45px;
+  font-weight: 800;
+  max-width: 820px;
+}
+.heder-desc_dop1, 
+.heder-desc_dop2 {
+  width: 90%;
+  font-size: 20px;
+  padding: 10px 0;
+  font-weight: 400;
+  max-width: 652px;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 10px 30px;
+  max-width: 252px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+  color: white;
+}
+.btn-green {
+  background-color: var(--color-green);
+  border-radius: 50px;
+  border: 1px solid var(--color-green);
 }
 
-.header {
-  
+.calc {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+  right: 256px;
+  top: 100px;
+}
+.calc-pic {
+  background-image: url(../svg/calculator.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* -------- see-form ------- */
+
+.see-form {
+  background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 20%, #ffffff 100%);
+  padding-top: 70px;
+}
+.see-form .contains {
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
+  padding: 57px;
+  border-radius: 14px;
+}
+.action {
+  font-size: 28px;
+
+}
+.action span {
+  color: var(--color-green);
+}
+.see-form form {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 17px;
+  font-size: 18px;
+}
+.see-form input {
+  width: 316px;
+  max-width: 316px;
+  outline: none;
+  background-color: #F3F3F3;
+  border: 1px solid #F3F3F3;
+  border-radius: 50px;
+  box-shadow: none;
+  color:#2A2A2A;
+  font-size: 16px;
+  padding: 20px 30px;
+  text-align: left;
+}
+.see-form button {
+  width: 261px;
+  max-width: 261px;
 }
