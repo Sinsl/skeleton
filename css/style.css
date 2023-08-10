@@ -19,6 +19,7 @@
 }
 body {
   width: 100%;
+  font-family: 'NotoSans';
 }
 header,
 article,
@@ -98,7 +99,6 @@ header {
   background-size: cover;
   background-position: center;
   z-index: 0;
-  font-family: 'NotoSans';
 }
 header::after {
   content: '';
@@ -134,7 +134,7 @@ header::before {
 }
 .heder-desc {
   width: 60%;
-  padding: 150px 0 250px;
+  padding: 8% 0 15%;
   z-index: 1;
 }
 .heder-desc_main {
@@ -184,17 +184,22 @@ header::before {
 /* -------- see-form ------- */
 
 .see-form {
+  position: relative;
   background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 20%, #ffffff 100%);
-  padding-top: 70px;
+  /* padding-top: 70px; */
+  z-index: 0;
+  padding: 70px 20px 20px;
 }
 .see-form .contains {
+  position: relative;
+  background-color: #ffffff;
   box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
   padding: 57px;
   border-radius: 14px;
+  z-index: 0;
 }
 .action {
   font-size: 28px;
-
 }
 .action span {
   color: var(--color-green);
@@ -222,4 +227,217 @@ header::before {
 .see-form button {
   width: 261px;
   max-width: 261px;
+}
+
+.tree {
+  position: absolute;
+  background-image: url(../images/tree.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: -30px;
+  left: calc((100% - 1400px) / 2 - 100px);
+  /* left: -30px; */
+  z-index: -1;
+}
+/* .see-form::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/tree.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  width: 100%;
+  height: 100%;
+  top: -30px;
+  left: -30px;
+  z-index: -1;
+} */
+ /* Сначала делал ::after, но потом подумал, что было бы здорово перенести мужика вниз до 1030px - он наезжает на форму; но и WRAP не сработал. Добавил WRAP к FORM, так лучше  */
+
+.see-form .contains::after {
+  content: '';
+  position: absolute;
+  background-image: url(../images/form-worker.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: -33px;
+  z-index: -1;
+}
+
+form,
+.see-form-in {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form-in-left,
+.form-in-right {
+  width: 80%;
+}
+.form-worker {
+  position: absolute;
+  width: 388px;
+  height: 274px;
+  top: 56px;
+  right: -33px;
+}
+.form-worker-pic {
+  background-image: url(../images/form-worker.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  width: 90%;
+  height: 90%;
+}
+
+/* ------benefits------- */
+
+.benefits {
+  padding-top: 109px;
+  padding-bottom: 89px;
+}
+.benefits-header {
+  padding: 72px 0 30px;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+}
+.benefits-header span {
+  color: var(--color-green);
+}
+.benefits-content {
+  padding-top: 33px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.benefit {
+  min-width: 430px;
+  width: calc((100% - 20px*2)/3);
+  border-radius: 14px;
+  border: 1px solid rgba(189, 189, 189, 0.50);
+  background: rgba(255, 255, 255, 0.00);
+  display: flex;
+}
+.benefit-pic {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+.pic-one {
+  margin-top: 12px;
+  background-image: url(../svg/1.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-two {
+  margin-top: 12px;
+  background-image: url(../svg/2.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-three {
+  margin-top: 12px;
+  background-image: url(../svg/3.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-four {
+  margin-top: 12px;
+  background-image: url(../svg/4.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-five {
+  margin-top: 12px;
+  background-image: url(../svg/5.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.pic-six {
+  margin-top: 12px;
+  background-image: url(../svg/6.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.benefit-description {
+  padding: 24px;
+  max-width: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.benefit-description-title {
+  font-weight: 800;
+}
+.benefit-description-text {
+  font-size: 14px;
+  color: #767676;
+}
+
+/* --------- scelet --------- */
+
+.scelet {
+  width: 100%;
+  padding: 53px 20px 85px;
+}
+.scelet .contains {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  row-gap: 64px;
+}
+
+.scelet-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+.scelet-title span {
+  color: var(--color-green);
+}
+
+.scelet-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} 
+.scelet-content-left,
+.scelet-content-rigth {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+.scelet-content-item {
+  padding: 18px 36px;
+  display: flex;
+  gap: 12px;
+  width: 398px;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  transform: skewX(-10deg);
+}
+.scelet-content-item img,
+.scelet-content-item div {
+  transform: skewX(10deg);
 }
