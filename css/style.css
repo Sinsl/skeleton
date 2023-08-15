@@ -25,6 +25,7 @@ header,
 article,
 footer {
   width: 100%;
+  overflow: hidden;
 }
 .contains{
   width: 100%;
@@ -160,9 +161,10 @@ header::before {
   color: white;
 }
 .btn-green {
-  background-color: var(--color-green);
-  border-radius: 50px;
   border: 1px solid var(--color-green);
+  border-radius: 50px;
+  background: linear-gradient(180deg, #96C12A 0%, #84AE19 100%);
+  box-shadow: 0px 4px 4px 0px #63850E;
 }
 
 .calc {
@@ -401,7 +403,8 @@ form,
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* z-index: -1; */
+  background: linear-gradient(to bottom, #f9f9f9 0%, #ffffff 20%, #ffffff 100%);
+  z-index: 0;
 }
 .scelet::after {
   position: absolute;
@@ -414,6 +417,7 @@ form,
   height: 100%;
   left: 0;
   top: 0;
+  z-index: -1;
 }
 .scelet::before {
   position: absolute;
@@ -425,17 +429,34 @@ form,
   width: 100%;
   height: 40%;
   left: 0;
-  bottom: 90px;
+  bottom: 0;
+  z-index: -1;
 }
 
 /* Не много не понял, как другие облака добавить, поэтому эти растянул на 100% */
 
 .scelet .contains {
+  position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   row-gap: 64px;
+  z-index: 0;
+}
+.scelet .contains::after {
+  content: '';
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+  height: 200px;
+  background-image: url(../images/clouds.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  bottom: 50px;
+  z-index: 0;
 }
 
 .scelet-title {
@@ -489,7 +510,6 @@ form,
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-bottom: 100px;
 }
 .features-header {
   padding: 128px 0 72px;
@@ -505,9 +525,9 @@ form,
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  position: relative;
 }
 .features-content-item {
+  position: relative;
   min-width: 300px;
   width: calc((100% - 30px*3)/4);
   border-radius: 14px;
@@ -516,60 +536,51 @@ form,
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: relative;
   z-index: 1;
 }
-.features-content-item_box {
+.features-content-item-box {
+  position: relative;
   min-width: 300px;
   width: calc((100% - 30px*3)/4);
-  position: relative;
-  height: 100%;
   z-index: 1;
 }
-.features-content-item_tree__1,
-.features-content-item_tree__2,
-.features-content-item_tree__3 {
-  position: absolute;
-}
-.features-content-item_tree__1 {
-  width: 338px;
-  height: 320px;
-  background-image: url(../images/tree-2.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  top: -100px;
-  left: -100px;
-}
-.features-content-item_tree__2 {
-  width: 249px;
-  height: 286px;
-  background-image: url(../images/tree-3.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  right: -100px;
-  top: 150px;
-  z-index: 1;
-}
-.features-content-item_tree__3 {
-  width: 220px;
-  height: 198px;
-  background-image: url(../images/tree-4.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  left: -100px;
-  bottom: -100px;
-  z-index: 0;
-}
-.features-content-item:nth-child(5),
-.features-content-item:nth-child(1),
-.features-content-item:nth-child(4) {
-  min-width: 100%;
+.features-content-item-box .features-content-item {
   width: 100%;
   height: 100%;
 }
-.features-content-item:nth-child(4) {
+.features-content-item-tree {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   z-index: -1;
 }
+.tree1 {
+  width: 340px;
+  height: 320px;
+  top: -120px;
+  left: -120px;
+  background-image: url(../images/tree-2.png);
+}
+.tree2,
+.tree4 {
+  width: 250px;
+  height: 285px;
+  top: -120px;
+  right: -100px;
+  background-image: url(../images/tree-3.png);
+}
+.tree4 {
+  display: none;
+}
+.tree3 {
+  width: 220px;
+  height: 200px;
+  bottom: -90px;
+  left: -90px;
+  background-image: url(../images/tree-4.png);
+}
+
 .features-item-description {
   display: flex;
   flex-direction: column;
@@ -606,4 +617,195 @@ form,
   text-align: center;
   font-size: 69px;
   color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* ---------catalog----------- */
+
+
+.catalog {
+  width: 100%;
+  background-image: url(../images/catalog-fon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover
+}
+.catalog-header {
+  text-align: center;
+  padding-top: 159px;
+  font-size: 32px;
+  font-weight: 800;
+}
+.catalog-header span {
+  color: var(--color-green);
+}
+.bathhouses {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 19px;
+  padding: 66px 0 92px;
+}
+.bathhouse {
+  min-width: 430px;
+  width: calc((100% - 19px*2)/3);
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  background: #FFF;
+}
+.bathhouse-pic {
+  width: 100%;
+  height: 215px;
+}
+.bathhouse-pic .img {
+ background-image: url(../images/dachnik.png);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: contain;
+ width: 100%;
+ height: 97%; 
+}
+.bathhouse-content,
+.bathhouse-sale {
+  padding: 0 35px 0 29px;
+}
+.bathhouse-header {
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bathhouse-name {
+  font-size: 18px;
+  font-weight: 800;
+}
+.bathhouse-data {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.bathhouse-person {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+.bathhouse-person-pic {
+  width: 16px;
+  height: 16px;
+}
+.bathhouse-person-pic .svg {
+  background-image: url(../svg/user.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.bathhouse-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+.bathhouse-area-pic {
+  width: 16px;
+  height: 16px;
+}
+.bathhouse-area-pic .svg {
+  background-image: url(../svg/area.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.bathhouse-text {
+  padding: 20px 0 30px;
+  color: #767676;
+  font-size: 14px;
+}
+.bathhouse-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 32px;
+} 
+.bathhouse-sale .btn {
+  width: 134px;
+  border-radius: 50px;
+  border: 1px solid #F3F3F3;
+  background: #F3F3F3;
+  color: #A8A8A8;
+  box-shadow: 0px 4px 4px 0px #E9E9E9;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+.bathhouse-sale .btn-green {
+  width: 239px;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 8px;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #96C12A 0%, #84AE19 100%);
+  box-shadow: 0px 4px 4px 0px #63850E;
+  cursor: pointer;
+}
+
+/* ------- video ---------- */
+.video {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #f5f5f2;
+  position: relative;
+  overflow: hidden;
+}
+.video-contains {
+  background-color: white;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 28px;
+  position: relative;
+  z-index: 0;
+}
+.video-contains::after {
+  position: absolute;
+  content: 'Уютный дом 64, будем знакомы!';
+  bottom: 150px;
+  z-index: 1;
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+.video-box {
+  width: 100%;
+}
+.video-box img {
+  width: 100%;
+}
+.video-cloud {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/clouds.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+img.temp {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: calc(50% - 55px);
+  left: calc(50% - 55px);
+}
+.rabochij {
+  position: absolute;
+  width: 350px;
+  height: 100%;
+  bottom: 0;
+  right: -50px;
+  background-image: url(../images/Rabochij.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
 }
