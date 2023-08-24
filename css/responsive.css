@@ -1,0 +1,234 @@
+@media (max-width: 1030px) {
+    /* ----------меню---------- */
+    .menu-box nav {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .burger-line {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 69px;
+        height: 69px;
+        gap: 6px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    /* При изменении ширины экрана плоски бургера немножко меняют свою высоту, притом по разному  */
+    .burger-line li {
+        list-style-type: none;
+        width: 29px;
+        height: 3px;
+        background-color: #86B119;
+    }
+    /* ------------header------------ */
+    .header-elements {
+        display: none;
+    }
+    .heder-desc_main {
+        font-size: 26px;
+    }
+    .heder-desc_dop1,
+    .heder-desc_dop2 {
+        font-size: 14px;
+    }
+
+      /* -------- see-form ------- */
+    
+    .see-form .contains {
+        max-width: 778px;
+      }
+    .tree {
+        max-width: 778px;
+        top: -10px;
+        left: calc((100% - 778px) / 2 - 100px);
+    }
+    .see-form .contains::after {
+        display: none;
+    }
+    .action {
+        font-size: 18px;
+        font-weight: 800;
+    }
+    .see-form form {
+        
+    }
+    .form-in-left {
+        width: 100%;
+    }
+    .see-form input {
+        width: 320px;
+        max-width: 320px;
+    }
+    
+    /* ------benefits------- */
+
+    .benefits .contains {
+        max-width: 778px;
+    }
+    .benefits-header {
+        font-size: 22px;
+    }
+    .benefits-content {
+        gap:18px;
+    }
+    .benefit {
+        min-width: 360px;
+        width: calc((100% - 18px*2)/2);
+    } 
+    .benefit-pic {
+        margin: 10px;
+        width: 53px;
+        height: 49px;
+    }
+    .benefit-description {
+        padding: 11px;
+        max-width: 283px;
+        gap: 10px;
+    }
+    .benefit-description-title {
+        font-size: 14px;
+    }
+    /* --------- scelet --------- */
+    
+    .scelet {
+        padding: 53px 20px 600px;
+    }
+    .scelet .contains {
+        max-width: 778px;
+    }
+    .scelet-title {
+        font-size: 21px;
+        font-weight: 800;
+    }
+    .scelet-content-item {
+        max-width: 306px;
+    }
+    .scelet-content-text {
+        font-size: 14px;
+    }
+    .scelet::after {
+        top: 170px;
+    }
+    .scelet::before {
+        bottom: 136px;
+    }
+    .scelet .contains::after {
+        width: 130%;
+        bottom: -494px;
+    }
+    .scelet .btn {
+        position: absolute;
+        bottom: -520px;
+    }
+    /* ------features------- */
+
+    .features .contains {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .tree4 {
+      display: block;
+    }
+    .tree2 {
+      display: none;
+    }
+    .features-content-item:nth-child(7){
+      z-index: 0;
+    }
+
+    .bathhouse {
+      width: calc((100% - 19px)/2);
+  }
+
+
+    .projects-catalog {
+      flex-wrap: nowrap;
+    }
+
+    .project:nth-child(4) {
+      display: none;
+    }
+
+    .video-cloud {
+      height: 100px;
+    }
+
+    .video-contains::after {
+      bottom: 80px;
+      font-size: 24px;
+    }
+
+    .rabochij {
+      width: 250px;
+      height: 100%;
+      bottom: 0;
+      right: -50px;
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+  .scelet-content {
+    gap: 5px;
+  }
+  .scelet-content-item {
+    padding: 18px 18px;
+  }
+
+  .features-content-item:nth-child(6){
+    z-index: 0;
+  }
+
+  .video-contains::after {
+    bottom: 70px;
+    font-size: 22px;
+  }
+
+  .rabochij {
+    width: 200px;
+    height: 100%;
+    bottom: 0;
+    right: -50px;
+  }
+  .video-box img:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+  }
+
+  .reviews-border {
+    flex-wrap: wrap;
+  }
+
+  .bathhouse {
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.bathhouse-pic {
+  height: 300px;
+}
+.bathhouse-pic .img {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+  .reviews-left {
+    max-width: 100%;
+    width: 100%;
+    padding: 10px;
+    gap: 13px;
+  }
+  
+  .reviews-right {
+    padding-right: 0;
+  }
+}
