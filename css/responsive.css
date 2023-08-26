@@ -231,4 +231,112 @@
   .reviews-right {
     padding-right: 0;
   }
+
+  .projects-catalog {
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 67px;
+  }
+  .menu-tel_num {
+    font-size: 14px;
+  }
+  .menu-tel_img {
+    width: 16px;
+    height: 15px;
+}
+.burger-line {
+  width: 48px;
+  height: 48px;
+  gap: 5px;
+}
+.burger-line li {
+  width: 20px;
+  height: 2px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+.heder-desc {
+  width: 100%;
+  padding: 8% 0 356px;
+}
+header::after {
+  background-size: 100%;
+  background-position: center;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+}
+.header-elements {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+.calc {
+  width: 56px;
+  height: 56px;
+  left: 20px;
+  top: 50px;
+}
+.second-tel {
+  position: absolute;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  right: 20px;
+  top: 50px;
+  background-color: #86B119;
+  cursor: pointer;
+}
+
+.scelet {
+  padding: 53px 20px 100px;
+}
+.scelet-content {
+  flex-direction: column;
+  gap: 250px;
+}
+.scelet-content-item {
+  max-width: 100%;
+}
+.scelet .btn {
+  bottom: -70px;
+}
+/* .scelet::before {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+} */
+.scelet::after {
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 40px;
+}
+
+.features-header {
+  width: 250px;
+  margin: 0 auto;
+  padding: 56px 0;
+  font-size: 24px;
+}
+.bathhouse-pic {
+  height: 150px;
+}
 }
