@@ -1185,6 +1185,10 @@ img.temp-video {
 .logo-footer {
   padding: 26px 0;
 }
+.menu-footer {
+  display: flex;
+  gap: 20px;
+}
 .menu-footer nav {
   font-size: 18px;
   display: flex;
@@ -1198,4 +1202,7 @@ img.temp-video {
   gap: 30px;
   align-items: center;
   color: #767676;
+}
+.footer-br {
+  display: none;
 }
