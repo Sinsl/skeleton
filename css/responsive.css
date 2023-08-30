@@ -447,6 +447,7 @@ header::after {
 .reviews-left {
   text-align: center;
 }
+
 .reviews-left-pic {
   text-align: center;
   width: 100%;
@@ -454,14 +455,17 @@ header::after {
   border: none;
   order: -1;
 }
+
 .reviews-left-pic img{
   width: 60px;
   height: 60px;
   margin: 2px 5px;
 }
+
 .contacty {
  height: 850px; 
 }
+
 .contact-content {
   display: flex;
   flex-direction: column;
