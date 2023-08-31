@@ -1,20 +1,7 @@
-<svg width="108" height="109" viewBox="0 0 108 109" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="&#208;&#180;&#208;&#178;&#208;&#181; &#209;&#136;&#209;&#130;&#209;&#131;&#208;&#186;&#208;&#184;">
-<g id="Rectangle 4" filter="url(#filter0_d_30_209)">
-<rect x="10" y="10" width="88" height="89" rx="44" fill="#96C12A"/>
-<rect x="11" y="11" width="86" height="87" rx="43" stroke="#86B119" stroke-width="2"/>
-</g>
-<path id="Vector" d="M70.1347 61.7508L65.5197 57.4247C63.8715 55.8797 61.0696 56.4977 60.4103 58.5062C59.9159 59.8969 58.2677 60.6694 56.7843 60.3603C53.4879 59.5878 49.0378 55.5707 48.2137 52.326C47.7192 50.9354 48.7082 49.3904 50.1915 48.9269C52.3342 48.3089 52.9935 45.6823 51.3453 44.1373L46.7303 39.8112C45.4118 38.7296 43.4339 38.7296 42.2802 39.8112L39.1486 42.7467C36.0171 45.8368 39.4783 54.0256 47.2248 61.2873C54.9713 68.5491 63.7067 71.9482 67.0031 68.8581L70.1347 65.9225C71.2884 64.6864 71.2884 62.8324 70.1347 61.7508Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_30_209" x="0" y="0" width="108" height="109" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="5"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.588235 0 0 0 0 0.756863 0 0 0 0 0.164706 0 0 0 0.5 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_30_209"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_30_209" result="shape"/>
-</filter>
-</defs>
+<svg width="21.000000" height="19.727295" viewBox="0 0 21 19.7273" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="Vector" d="M20.4493 14.4778L17.5126 11.7249C16.4637 10.7417 14.6807 11.135 14.2611 12.4131C13.9464 13.2981 12.8976 13.7896 11.9536 13.593C9.85596 13.1013 7.02405 10.5449 6.49963 8.48022C6.18494 7.59521 6.81433 6.61206 7.7583 6.31714C9.1217 5.92383 9.54126 4.25244 8.49243 3.26929L5.55566 0.516113C4.71655 -0.172119 3.45801 -0.172119 2.72375 0.516113L0.730957 2.38428C-1.26184 4.35083 0.940674 9.56177 5.87036 14.1829C10.7999 18.804 16.3588 20.967 18.4565 19.0005L20.4493 17.1326C21.1836 16.3459 21.1836 15.166 20.4493 14.4778Z" fill-rule="nonzero" fill="#FFFFFF"/>
 </svg>

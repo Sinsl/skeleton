@@ -37,7 +37,7 @@
     }
 
       /* -------- see-form ------- */
-    
+
     .see-form .contains {
         max-width: 778px;
       }
@@ -54,7 +54,7 @@
         font-weight: 800;
     }
     .see-form form {
-        
+
     }
     .form-in-left {
         width: 100%;
@@ -63,7 +63,7 @@
         width: 320px;
         max-width: 320px;
     }
-    
+
     /* ------benefits------- */
 
     .benefits .contains {
@@ -78,7 +78,7 @@
     .benefit {
         min-width: 360px;
         width: calc((100% - 18px*2)/2);
-    } 
+    }
     .benefit-pic {
         margin: 10px;
         width: 53px;
@@ -93,7 +93,7 @@
         font-size: 14px;
     }
     /* --------- scelet --------- */
-    
+
     .scelet {
         padding: 53px 20px 600px;
     }
@@ -189,7 +189,7 @@
     width: 100%;
     align-items: center;
     flex-direction: column;
-} 
+}
    .benefit-description {
     padding: 24px;
     max-width: 100%;
@@ -236,11 +236,47 @@
     flex-wrap: wrap;
   }
 
+  .bathhouses-view {
+    width: 100vw;
+    position: relative;
+    left: -20px;
+    padding: 66px 0 92px;
+    height: 700px;
+  }
+
+  .bathhouses {
+    width: 200%;
+    margin-left: calc(0px - (200% - 100%) / 2);
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 11px;
+    padding: 0;
+  }
+
   .bathhouse {
-    min-width: 100%;
-    width: 100%;
+    position: absolute;
+    min-width: calc((100% - 11px * 2) / 3);
+    width: calc((100% - 11px * 2) / 3);
+    left: 0;
+    top: 0;
     overflow: hidden;
-}
+    display: none;
+  }
+  .bathhouse.active {
+    display: block;
+  }
+
+  .bathhouse.left {
+    left: 0;
+  }
+  .bathhouse.center {
+    left: calc((100% - 11px * 2) / 3 + 11px);
+  }
+  .bathhouse.right {
+    left: calc(100% - (100% - 11px * 2) / 3);
+  }
+
 .bathhouse-pic {
   height: 300px;
 }
@@ -256,7 +292,7 @@
     padding: 10px;
     gap: 13px;
   }
-  
+
   .reviews-right {
     padding-right: 0;
   }
@@ -354,7 +390,16 @@ header::after {
   background-color: #86B119;
   cursor: pointer;
 }
-
+.second-tel-pic {
+  background-image: url(../svg/phone2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50%;
+  height: 50%;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 15px;
+}
 .scelet {
   padding: 53px 20px 100px;
 }
@@ -410,16 +455,41 @@ header::after {
   padding-top: 70px;
 }
 
-.bathhouses {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 19px;
-  padding: 66px 0 92px;
-  overflow-x: scroll;
-}
 .projects {
-  padding-top: 70px;
+  padding: 70px 0 0;
+}
+
+.project-parametrs {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-parametrs .item {
+   min-width: 130px;
+}
+.projects-pic {
+  height: 150px;
+}
+.projects-prev {
+  bottom: 7px;
+}
+.preview {
+    width: 64px;
+    height: 35px;
+}
+.rabochij {
+  width: 144px;
+  right: -41px;
+}
+.video-contains::after {
+  bottom: 50px;
+  left: 10px;
+  font-size: 14px;
+}
+.video-box img:nth-child(2) {
+  width: 38px;
+  height: 38px;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
 }
 
 .slider-arrows {
@@ -461,9 +531,23 @@ header::after {
   height: 60px;
   margin: 2px 5px;
 }
-
+.bubble {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.bubble-item {
+  width: 11px;
+  height: 11px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  border: 1px solid rgb(233, 233, 233);
+}
+.active-bubble {
+  background: rgb(150, 193, 42);
+}
 .contacty {
- height: 850px; 
+ height: 850px;
 }
 
 .contact-content {
@@ -478,5 +562,49 @@ header::after {
 .modal-contact {
   padding-bottom: 30px;
 }
+}
+@media (max-width: 350px) {
+  .heder-desc_main {
+    font-size: 24px;
+}
+.heder-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+/* Какие еще рабочие методы центровки кнпоки "btn btn-green", кроме флекса? Пробовал и text-align и width: 0 auto - не помогало. Это за-за тега а? */
+
+.see-form {
+  padding: 20px 20px 20px;
+}
+.see-form form {
+  font-size: 16px;
+}
+.see-form input {
+  font-size: 14px;
+}
+/* В форме обрезается ФИО */
+
+.scelet {
+  padding: 0px 20px 100px;
+}
+.scelet .btn {
+    bottom: -90px;
+}
+.bathhouse-name {
+  font-size: 14px;
+}
+.bathhouse-data,
+.bathhouse-text {
+  font-size: 12px;
+}
+/* Слева от описания скролл */
+
+.bathhouse-sale {
+  flex-direction: column;
+}
+.bathhouse-sale .btn {
+  width: 239px;
+}
 }

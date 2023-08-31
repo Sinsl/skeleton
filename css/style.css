@@ -641,6 +641,12 @@ form,
 .catalog-header span {
   color: var(--color-green);
 }
+
+.bathhouses-view {
+  width: 100%;
+  overflow: hidden;
+}
+
 .bathhouses {
   display: flex;
   flex-direction: row;
@@ -1066,6 +1072,9 @@ img.temp-video {
   background-size: contain;
   top: 22px;
   right: 23px;
+}
+.bubble {
+  display: none;
 }
 /* -------contacty--------- */
 
