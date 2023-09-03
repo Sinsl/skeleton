@@ -17,6 +17,7 @@
   src: url(../fonts/NotoSans-Bold.ttf);
   font-weight: 700;
 }
+
 body {
   width: 100%;
   font-family: 'NotoSans';
@@ -1116,7 +1117,7 @@ img.temp-video {
   border: 1px solid #767676;
   border-radius: 14px;
 }
-.active {
+.modal-contact.active {
   display: block;
 }
 .contact-title {

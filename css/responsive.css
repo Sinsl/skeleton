@@ -1,10 +1,55 @@
+:root {
+  --duration: 1000ms;
+}
+
 @media (max-width: 1030px) {
     /* ----------меню---------- */
+    header {
+      position: relative;
+    }
+    /* body {
+      position: relative;
+    } */
+    .logo {
+      position: relative;
+      z-index: 20;
+    }
     .menu-box nav {
-        display: none;
+      /* display: none; */
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -500px;
+      background-color: white;
+      width: 100%;
+      height: 500px;
+      color: black;
+      z-index: 10;
+      padding: 100px 40px 40px;
+      transition: top 1s;
+      border-bottom: 3px solid #86B119;
+    }
+    .menu-box nav.active-nav {
+      /* display: block; */
+      top: 0;
+      transition: top 1s;
+    }
+
+    .menu-nav_item {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      max-width: 250px;
+      margin: 20px auto;
+    }
+
+    .menu-tel {
+      position: relative;
+      z-index: 20;
     }
     .burger {
-        display: block;
+      display: block;
     }
     .burger-line {
         display: flex;
@@ -16,6 +61,7 @@
         gap: 6px;
         background-color: white;
         border-radius: 50%;
+        border: 1px solid #86B119;
     }
 
     .burger-line li {
@@ -23,7 +69,25 @@
         width: 29px;
         height: 3px;
         background-color: #86B119;
+        opacity: 1;
+        transform: rotate(0deg) translate(0px, 0px);
+        transition-property: transform, opacity, background-color;
+        transition-duration: 1s;
     }
+    .burger-line.active li:nth-child(1){
+      transform: rotate(45deg) translate(7px, 5.5px);
+      background-color: red;
+      transition: transform 1s, background-color 1s;
+    }
+    .burger-line.active li:nth-child(2){
+      opacity: 0;
+    } 
+    .burger-line.active li:nth-child(3){
+      transform: rotate(-45deg) translate(7px, -5.5px);
+      background-color: red;
+      transition: transform 1s, background-color 1s;
+    } 
+    
     /* ------------header------------ */
     .header-elements {
         display: none;
@@ -124,8 +188,10 @@
         position: absolute;
         bottom: -520px;
     }
-    /* ------features------- */
-
+    /* ------features------- */  
+    .features {
+        padding-bottom: 20px;
+}
     .features .contains {
       width: 100%;
       max-width: 800px;
@@ -145,6 +211,9 @@
       width: calc((100% - 19px)/2);
   }
 
+    .projects {
+      padding: 50px 0;
+    }
 
     .projects-catalog {
       flex-wrap: nowrap;
@@ -154,6 +223,77 @@
       display: none;
     }
 
+    .projects-view {
+      width: 100vw;
+      position: relative;
+      left: -20px;
+      padding: 66px 0 0;
+      height: 700px;
+    }
+  
+    .projects-catalog {
+      width: 200%;
+      margin-left: calc(0px - (200% - 100%) / 2);
+      position: relative;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 11px;
+      padding: 0;
+    }
+      .project {
+      position: absolute;
+      min-width: calc((100% - 11px * 2) / 3);
+      width: calc((100% - 11px * 2) / 3);
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      display: none;
+    }
+    .project.active {
+      display: flex;
+    }
+  
+    .project.left {
+      left: 0;
+      opacity: 0.3;
+      transition-property: opacity, left;
+      transition-duration: var(--duration);
+    }
+    .project.center {
+      left: calc((100% - 11px * 2) / 3 + 11px);
+      opacity: 1;
+      transition-property: opacity, left;
+      transition-duration: var(--duration);
+    }
+    .project.right {
+      left: calc(100% - (100% - 11px * 2) / 3);
+      opacity: 0.3;
+      transition-property: opacity, left;
+      transition-duration: var(--duration);
+    }
+    .project.left.end,
+    .project.left.start {
+      left: calc(0px - ((100% - 8%) / 3));
+      transition-property: left;
+      transition-duration: var(--duration);
+    }
+  
+    .project.right.start,
+    .project.right.end {
+      left: 100%;
+      transition-property: left;
+      transition-duration: var(--duration);
+    }
+  
+    .project.left:hover,
+    .project.right:hover {
+      opacity: 0.7;
+    }
+
+    
+    .catalog-header {
+      padding-top: 48px;
+}
     .video-cloud {
       height: 100px;
     }
@@ -242,6 +382,7 @@
     left: -20px;
     padding: 66px 0 92px;
     height: 700px;
+    overflow: hidden;
   }
 
   .bathhouses {
@@ -263,18 +404,47 @@
     overflow: hidden;
     display: none;
   }
+
   .bathhouse.active {
-    display: block;
+    display: flex;
   }
 
   .bathhouse.left {
     left: 0;
+    opacity: 0.3;
+    transition-property: opacity, left;
+    transition-duration: var(--duration);
   }
   .bathhouse.center {
     left: calc((100% - 11px * 2) / 3 + 11px);
+    opacity: 1;
+    transition-property: opacity, left;
+    transition-duration: var(--duration);
   }
   .bathhouse.right {
     left: calc(100% - (100% - 11px * 2) / 3);
+    opacity: 0.3;
+    transition-property: opacity, left;
+    transition-duration: var(--duration);
+  }
+
+  .bathhouse.left.end,
+  .bathhouse.left.start {
+    left: calc(0px - ((100% - 8%) / 3));
+    transition-property: left;
+    transition-duration: var(--duration);
+  }
+
+  .bathhouse.right.start,
+  .bathhouse.right.end {
+    left: 100%;
+    transition-property: left;
+    transition-duration: var(--duration);
+  }
+
+  .bathhouse.left:hover,
+  .bathhouse.right:hover {
+    opacity: 0.7;
   }
 
 .bathhouse-pic {
@@ -299,8 +469,21 @@
   .reviews-right img.temp {
     left: calc(50% - 35px);
 }
-  .projects-catalog {
-    overflow-x: scroll;
+  /* .projects {
+    width: 100%;
+    padding: 150px 0 0;
+    background-color: #fefefd;
+}
+ */
+
+
+  .project-title,
+  .project-parametrs,
+  .project-bottom {
+    padding: 12px 34px;
+}
+  .reviews-header {
+    padding-top: 20px;
   }
   .modal-contact {
     width: calc(100% - 20px * 2);
@@ -347,6 +530,12 @@
 .burger-line li {
   width: 20px;
   height: 2px;
+}
+.burger-line.active li:nth-child(1){
+  transform: rotate(45deg) translate(5px, 4.5px);
+}
+.burger-line.active li:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -4.5px);
 }
 
 .header {
@@ -564,17 +753,45 @@ header::after {
 }
 }
 @media (max-width: 350px) {
-  .heder-desc_main {
-    font-size: 24px;
+.menu {
+  padding-top: 5px;
+}
+header .contains {
+  height: 850px;
+}
+/* Не нашел другого способа уменьшить высоту хэдера */
+
+header::after {
+  background-image: url(../images/header-house-mob.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  top: 24%;
+  left: 0;
+}
+header::before {
+  background-image: url(../images/clouds.png);
+  width: 100%;
+  height: 9%;
+  top: 79%;
+  left: -12px;
 }
 .heder-desc {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
-
 /* Какие еще рабочие методы центровки кнпоки "btn btn-green", кроме флекса? Пробовал и text-align и width: 0 auto - не помогало. Это за-за тега а? */
 
+.heder-desc_main {
+  font-size: 24px;
+}
+.header-elements {
+  top: -118px;
+}
 .see-form {
   padding: 20px 20px 20px;
 }
@@ -600,7 +817,9 @@ header::after {
   font-size: 12px;
 }
 /* Слева от описания скролл */
-
+.see-more {
+  display: none;
+}
 .bathhouse-sale {
   flex-direction: column;
 }
